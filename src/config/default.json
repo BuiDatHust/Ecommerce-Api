@@ -1,0 +1,12 @@
+{
+    "redisConfig": {
+        "host": "localhost" ,
+        "port": 6379,
+        "url": "redis://localhost:6379"  
+    },
+    "ratelimitConfig": {
+        "windowMs": 3600000, 
+        "max": 5, 
+        "message": "Too many accounts created from this IP, please try again after an hour"
+    } 
+}
