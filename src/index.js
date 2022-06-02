@@ -23,9 +23,9 @@ const app = express()
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
-// parse application/json
+// parse application/json   
 app.use(bodyParser.json())
-app.use(cookieParser(cookiename))
+app.use(cookieParser(cookiename))   
 // app.use(cors({
 //     origin: 'http://127.0.0.1:5500', //Chan tat ca cac domain khac ngoai domain nay
 //     credentials: true //Để bật cookie HTTP qua CORS

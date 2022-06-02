@@ -4,6 +4,7 @@ const config = require('config');
 
 const client = redis.createClient({
     url : "redis://localhost:6379"  
+    // url : "redis://redis"  
 })
 
 const connectRedisDb = async () =>{
