@@ -4,6 +4,7 @@ const createError = require('http-errors')
 const { authRouter, userRouter, productRouter, addressRouter, cartRouter, orderRouter, discountRouter, adminRouter } = require('./api/v1/routes')
 
 const route = (app) =>{
+    app.get('/', (req,res) => res.json("Hello"))
     app.use('/ecommerce/v1/user', userRouter)
     app.use('/ecommerce/v1/auth', authRouter)
     app.use('/ecommerce/v1/product', productRouter)

@@ -30,12 +30,12 @@ services:
         volumes:    
             - ./data:/data/db/redis
         ports:
-            - "6380:6380" 
+            - "6390:6390" 
         networks:
             - ecommerce-net  
     mongo1:
         container_name: mongo1
-        image: mongo:4.4
+        image: mongo
         volumes:
             - ~/mongors/data1:/data/db
             - ./rs-init.sh:/scripts/rs-init.sh
@@ -50,7 +50,7 @@ services:
         entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "dbrs" ]
     mongo2:
         container_name: mongo2
-        image: mongo:4.4
+        image: mongo
         volumes:
             - ~/mongors/data2:/data/db
         networks:
@@ -61,7 +61,7 @@ services:
         entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "dbrs" ]
     mongo3:
         container_name: mongo3
-        image: mongo:4.4
+        image: mongo
         volumes:
             - ~/mongors/data3:/data/db
         networks:
